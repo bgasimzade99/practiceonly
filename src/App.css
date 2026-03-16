@@ -69,6 +69,7 @@
   width: 100%;
   background: black;
   padding: 18px 40px;
+  padding-top:10px;
 }
 
 .nav ul {
@@ -81,8 +82,23 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-size:22px;
 }
 
 .nav a:hover {
-  color: #60a5fa;
+  color: #e8ce5c;
+}
+.hero2{ 
+  color:yellow;
+  display:flex;
+  justify-content:flex-end;
+  cursor:pointer;
+  padding:0px;
+  margin:0px;
+
+}
+.hero2:hover{ 
+  color:white;
+  pointer:cursor;
+  transform:scale(1.0);
 }
