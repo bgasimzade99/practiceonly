@@ -1,17 +1,13 @@
 import "../css/Home.css";
 import { useState } from "react";
+import bananiVideo from "../assets/banani.mp4";
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
 
   const bananGive = () => {
     setShowModal(true);
-
-    setTimeout(() => {
-      setShowModal(false);
-    }, 3000);
-  };
-
+  }
   return (
     <div className="hero">
       <div className="overlay">
@@ -42,9 +38,12 @@ function Home() {
       {showModal && (
         <div className="banana-modal">
           <div className="banana-card">
-            <img
-              src="https://thumbs.dreamstime.com/b/monkey-holds-banana-looks-smile-393524643.jpg?w=992"
-              alt="banana card"
+            <video
+              src={bananiVideo}
+              className="banana-video"
+              autoPlay
+              playsInline
+              onEnded={() => setShowModal(false)}
             />
 
             <div className="banana-message">
